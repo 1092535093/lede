@@ -50,6 +50,7 @@ jobs:
           # ln -s /mnt/openwrt/feeds ./feeds
           # ln -s /mnt/openwrt/staging_dir ./staging_dir
           df -h
+
       - name: add plugin
         run: |
           cd package
@@ -158,6 +159,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-webadmin=y
           CONFIG_PACKAGE_luci-app-wireguard=y
           CONFIG_PACKAGE_luci-app-wrtbwmon=y
+          CONFIG_PACKAGE_luci-app-koolproxyR=y
           EOF
           # LuCI主题:
           cat >> .config <<EOF
